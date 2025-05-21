@@ -1,6 +1,7 @@
 
-
-fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/sneakers.json')
+function fetchshoes(url) {
+    
+fetch'(https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/sneakers.json'
     .then(response => response.json())
     .then(sneakers => {
         const hero = document.getElementById("hero");
@@ -23,24 +24,33 @@ let avantageClient = sneakers.avantagesClients;
     
 avantageClient.forEach(avis => {
     const containerAvis = document.getElementById("containerAvis");
-    const paragrapheAvis=document.createElement("p");
-    paragrapheAvis.textContent=avis;
-    containerAvis.appendChild(paragrapheAvis);
-});
-let produit=sneakers.produits;
+    const ParaAvis = document.createElement("p");
+    ParaAvis.textContent=avis;
+    containerAvis.appendChild(ParaAvis);
 
-produit.forEach(produit => {
+
+});
+let produit =sneakers.produits;
+
+produit.forEach(Element => {
  const containerProduits=document.getElementById("containerProduits");
- const nomProduit=document.createElement("h3");
- nomProduit=textContent=produit;
-     
+ const nomProduit =document.createElement("h3");
+const descriptionproduit=document.createElement("p");
+nomProduit.textContent=Element.nom;
+
+descriptionproduit.textContent=Element.description;
+const imageproduit=document.createElement("img");
+imageproduit.src=Element["image-url"]
+
+
 });
 
 
 
 
     });
-
+}
+fetchshoes("https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/sneakers.json")
 
 
 
