@@ -1,0 +1,25 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+padding: 30px;
+background: black;
+color: white;
+display: block ;
+border: 20px;
+}
+
+#hero{
+    text-align: center;
+    margin-bottom: 25px;
+   background-color: brown;
+   padding: 30px;
+
+}
+
+#hero button{
+border: none;
+color: white;
+background: black;
+}
+
+
+

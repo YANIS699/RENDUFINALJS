@@ -50,6 +50,10 @@ card.appendChild(descriptionproduit);
 containerProduits.appendChild(card);
 
 
+
+
+
+});
 let services=sneakers.services;
 services.forEach(element => {
     
@@ -74,10 +78,33 @@ personnalisationservices.textContent=element.nom;
 
 });
 
+let temoignages=sneakers.temoignages;
+temoignages.forEach(element => {
+const containertemoignages=document.getElementById("containertemoignages");
+const cardtemoignages=document.createElement("div");
+const prenomtemoignages=document.createElement("h1");
+const notetemoignages=document.createElement("h4")
+const typeexperiencetemoignages=document.createElement("h2");
+const comtemoigngages=document.createElement("p");
 
-});
+cardtemoignages.appendChild(prenomtemoignages);
+cardtemoignages.appendChild(typeexperiencetemoignages);
+cardtemoignages.appendChild(comtemoigngages);
+cardtemoignages.appendChild(notetemoignages)
+containertemoignages.appendChild(cardtemoignages);
+
+prenomtemoignages.textContent=element.prenom;
+typeexperiencetemoignages.textContent=element.typeExperience;
+comtemoigngages.textContent=element.commentaire;
+notetemoignages.textContent=element.note
+
+
 
     })
+    
+
+})
+
  .catch(error => {
     // ici on gère les erreurs
     console.error('Erreur lors du fetch :', error);
